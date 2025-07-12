@@ -61,5 +61,5 @@ A Java-based desktop application developed as a second-year Programming II modul
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/tutor-booking-system.git
+   git clone https://github.com/your-username/ITBS.git
 
