@@ -37,9 +37,6 @@ A Java-based desktop application developed as a second-year Programming II modul
 
 ---
 
-
----
-
 ## 🧾 How It Works
 
 1. **User Registration**: All users start as students and fill out basic personal and academic information.
@@ -60,4 +57,9 @@ A Java-based desktop application developed as a second-year Programming II modul
 ---
 
 
+## 🧪 Getting Started (Local Setup)
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/tutor-booking-system.git
 
