@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import java.util.Properties;
 
 
 /*
@@ -458,9 +459,9 @@ public class AdminPortal extends javax.swing.JFrame {
     private void btnSearch1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearch1ActionPerformed
         // TODO add your handling code here:
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
 
             String query = "SELECT FIRST_NAME, MIDDLE_NAME, LAST_NAME, STUDENT_NUMBER, ROLES FROM TUTORIALS";
@@ -549,9 +550,9 @@ public class AdminPortal extends javax.swing.JFrame {
         jTabbedPane.setSelectedIndex(2);
 
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
 
             String query = "SELECT * FROM TUTORIAL_REQUESTS";
@@ -585,9 +586,9 @@ public class AdminPortal extends javax.swing.JFrame {
         // TODO add your handling code here:
         jTabbedPane.setSelectedIndex(1);
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
 
             String query = "SELECT FIRST_NAME, MIDDLE_NAME, LAST_NAME, STUDENT_NUMBER, ROLES FROM TUTORIALS";
@@ -620,9 +621,9 @@ public class AdminPortal extends javax.swing.JFrame {
     private void btnSearch2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearch2ActionPerformed
         // TODO add your handling code here:
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
 
             String StudentNo = tfStudentNo.getText();
@@ -653,9 +654,9 @@ public class AdminPortal extends javax.swing.JFrame {
     private void JUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JUpdateActionPerformed
         // TODO add your handling code here:
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
             String studentNo = tfStudentNo.getText();
 

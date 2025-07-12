@@ -348,9 +348,9 @@ public class ForgotPassword extends javax.swing.JFrame {
         studentLogin log = new studentLogin();
         String hashedPass = log.hashPassword(password);
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
 
             String query = "UPDATE TUTORIALS SET PASSWOORD = ? WHERE STUDENT_NUMBER = ?";
@@ -383,9 +383,9 @@ public class ForgotPassword extends javax.swing.JFrame {
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
         // TODO add your handling code here:
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
 
             String StudentNo = tfStudentNo.getText();

@@ -438,9 +438,9 @@ public class studentLogin extends javax.swing.JFrame {
         String studentNumber = tfStudentNo.getText();
         String password = tfPassword.getText();
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
 
             String query = "SELECT PASSWOORD, FIRST_NAME, LAST_NAME FROM TUTORIALS WHERE STUDENT_NUMBER = ?";
@@ -502,9 +502,9 @@ public class studentLogin extends javax.swing.JFrame {
         String studentNumber = tfStudentNo.getText();
         String password = tfPassword.getText();
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
 
             String query = "SELECT PASSWORD, FIRST_NAME, LAST_NAME FROM ADMIN WHERE STAFF_NUMBER = ?";

@@ -357,9 +357,9 @@ public class Profile extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
 
             Object title = JTitle.getSelectedItem();

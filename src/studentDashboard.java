@@ -78,7 +78,6 @@ public class studentDashboard extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
-        JDateChooser = new com.toedter.calendar.JDateChooser();
         jLabel9 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -354,8 +353,7 @@ public class studentDashboard extends javax.swing.JFrame {
                                     .addComponent(jComboBox, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(tfTutors, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(tfModules, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(JTime, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(JDateChooser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                                    .addComponent(JTime, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                 .addGap(51, 51, 51))
         );
         jPanel3Layout.setVerticalGroup(
@@ -384,10 +382,8 @@ public class studentDashboard extends javax.swing.JFrame {
                     .addComponent(jLabel7)
                     .addComponent(JTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel11)
-                    .addComponent(JDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel11)
+                .addGap(14, 14, 14)
                 .addComponent(jButton6)
                 .addContainerGap(32, Short.MAX_VALUE))
         );
@@ -511,9 +507,9 @@ public class studentDashboard extends javax.swing.JFrame {
         // TODO add your handling code here 
         JTabbedTutorials.setSelectedIndex(0);
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
 
             ProfileClass prof = new ProfileClass();
@@ -583,9 +579,9 @@ public class studentDashboard extends javax.swing.JFrame {
     private void tfModulesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tfModulesMouseClicked
         // TODO add your handling code here:
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
 
             ProfileClass prof = new ProfileClass();
@@ -647,9 +643,9 @@ public class studentDashboard extends javax.swing.JFrame {
     private void tfTutorsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfTutorsActionPerformed
         // TODO add your handling code here:
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
 
             ProfileClass prof = new ProfileClass();
@@ -689,9 +685,9 @@ public class studentDashboard extends javax.swing.JFrame {
     private void tfTutorsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tfTutorsMouseClicked
         // TODO add your handling code here:
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
 
             ProfileClass prof = new ProfileClass();
@@ -738,9 +734,9 @@ public class studentDashboard extends javax.swing.JFrame {
         ProfileClass prof = new ProfileClass();
         String studentNo = prof.getStudentNo();
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
 
             String query = "INSERT INTO TUTORIAL_REQUESTS (STUDENT_YEAR, MODULE, TUTOR_NAME, PREFERED_MODE, TIME, DATE, STUDENT_NO, STATUS) VALUES(?,?,?,?,?,?,?,?)";
@@ -775,9 +771,9 @@ public class studentDashboard extends javax.swing.JFrame {
         String course;
 
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
 
             ProfileClass prof = new ProfileClass();
@@ -836,9 +832,9 @@ public class studentDashboard extends javax.swing.JFrame {
         String StudentNo = prof.getStudentNo();
 
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
 
             String query = "SELECT STUDENT_YEAR, MODULE, TUTOR_NAME, PREFERED_MODE, TIME, DATE, STUDENT_NO, STATUS FROM TUTORIAL_REQUESTS WHERE STATUS = ? AND STUDENT_NO = ?";
@@ -962,7 +958,6 @@ public class studentDashboard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> JAcademicLevel;
     private javax.swing.JButton JAppointments;
-    private com.toedter.calendar.JDateChooser JDateChooser;
     private javax.swing.JButton JMaterial;
     private javax.swing.JButton JQuiz;
     private javax.swing.JButton JRequests;

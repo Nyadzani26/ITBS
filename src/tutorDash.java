@@ -800,9 +800,9 @@ public class tutorDash extends javax.swing.JFrame {
         ProfileClass prof = new ProfileClass();
         String studentNo = prof.getStudentNo();
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
 
             String query = "INSERT INTO AVAILABLE_TUTORS (TUTOR_COURSE, TUTORING_YEAR, TUTORING_MODULE, AVAILABLE_SLOT, PREFERED_MODE, STUDENT_NO) VALUES(?,?,?,?,?,?)";
@@ -836,7 +836,7 @@ public class tutorDash extends javax.swing.JFrame {
     }//GEN-LAST:event_JAvailableSlotActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-          // TODO add your handling code here:
+        // TODO add your handling code here:
         String status = "Rejected"; // 
         ProfileClass prof = new ProfileClass();
         String tutorName = prof.getStudentNo();
@@ -854,9 +854,9 @@ public class tutorDash extends javax.swing.JFrame {
                     String userStudentNo = (String) model.getValueAt(selectedRow, 1);
                     String tutorResponse = status;
 
-                    String host = "jdbc:derby://localhost:1527/Tutorilas";
-                    String uName = "user1";
-                    String uPass = "user1";
+                    String host = "db.url";
+                    String uName = "db.username";
+                    String uPass = "db.password";
                     con = DriverManager.getConnection(host, uName, uPass);
 
                     // Update the status in the database
@@ -877,12 +877,12 @@ public class tutorDash extends javax.swing.JFrame {
 
                                         // Construct email body
                                         String subject = "ITBS: Tutorial Request Status";
-                                        String body = "We regret to inform you that your tutorial request has been " + status.toLowerCase() + " by the tutor. \n Reason: "+ reason + "\n";
+                                        String body = "We regret to inform you that your tutorial request has been " + status.toLowerCase() + " by the tutor. \n Reason: " + reason + "\n";
                                         body += "Thank you for using our service.";
 
                                         // Send email
                                         OTPGenerator email = new OTPGenerator(); // Assuming OTPGenerator is your email sending utility
-                                        email.sendEmail(toEmail, subject , body);
+                                        email.sendEmail(toEmail, subject, body);
 
                                         JOptionPane.showMessageDialog(null, "Response sent successfully to " + toEmail);
                                     }
@@ -913,9 +913,9 @@ public class tutorDash extends javax.swing.JFrame {
                 String userStudentNo = (String) model.getValueAt(selectedRow, 1);
                 String tutorResponse = status; // Assuming the status is set to "Approved" or "Rejected" as per your requirement
 
-                String host = "jdbc:derby://localhost:1527/Tutorilas";
-                String uName = "user1";
-                String uPass = "user1";
+                String host = "db.url";
+                String uName = "db.username";
+                String uPass = "db.password";
                 con = DriverManager.getConnection(host, uName, uPass);
 
                 // Update the status in the database
@@ -981,9 +981,9 @@ public class tutorDash extends javax.swing.JFrame {
         // TODO add your handling code here:
         JTabbedPane.setSelectedIndex(1);
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
 
             ProfileClass prof = new ProfileClass();
@@ -1025,9 +1025,9 @@ public class tutorDash extends javax.swing.JFrame {
         // TODO add your handling code here:
         JTabbedPane.setSelectedIndex(2);
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
 
             String status = "Approved";
@@ -1084,9 +1084,9 @@ public class tutorDash extends javax.swing.JFrame {
         double totalAmount = hours * rate;
 
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
 
             String query = "INSERT INTO PAYMENTS (TUTOR_NAME, STUDENT_NAME, TUTORIAL_HOURS, MODULE, TOTAL_PRICE) VALUES(?,?,?,?,?)";
@@ -1118,9 +1118,9 @@ public class tutorDash extends javax.swing.JFrame {
     private void JAcademicLevelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JAcademicLevelMouseClicked
         // TODO add your handling code here:
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
 
             ProfileClass prof = new ProfileClass();
@@ -1171,42 +1171,42 @@ public class tutorDash extends javax.swing.JFrame {
 
     private void JProfileMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JProfileMouseEntered
         // TODO add your handling code here:
-        JProfile.setBackground(new Color(204,153,0));
+        JProfile.setBackground(new Color(204, 153, 0));
     }//GEN-LAST:event_JProfileMouseEntered
 
     private void JProfileMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JProfileMouseExited
         // TODO add your handling code here:
-        JProfile.setBackground(new Color(255,255,255));
+        JProfile.setBackground(new Color(255, 255, 255));
     }//GEN-LAST:event_JProfileMouseExited
 
     private void JRequestsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JRequestsMouseEntered
         // TODO add your handling code here:
-        JRequests.setBackground(new Color(204,153,0));
+        JRequests.setBackground(new Color(204, 153, 0));
     }//GEN-LAST:event_JRequestsMouseEntered
 
     private void JRequestsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JRequestsMouseExited
         // TODO add your handling code here:
-        JRequests.setBackground(new Color(255,255,255));
+        JRequests.setBackground(new Color(255, 255, 255));
     }//GEN-LAST:event_JRequestsMouseExited
 
     private void JAppointmentsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JAppointmentsMouseEntered
         // TODO add your handling code here:
-        JAppointments.setBackground(new Color(204,153,0));
+        JAppointments.setBackground(new Color(204, 153, 0));
     }//GEN-LAST:event_JAppointmentsMouseEntered
 
     private void JAppointmentsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JAppointmentsMouseExited
         // TODO add your handling code here:
-        JAppointments.setBackground(new Color(255,255,255));
+        JAppointments.setBackground(new Color(255, 255, 255));
     }//GEN-LAST:event_JAppointmentsMouseExited
 
     private void JClaimsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JClaimsMouseEntered
         // TODO add your handling code here:
-        JClaims.setBackground(new Color(204,153,0));
+        JClaims.setBackground(new Color(204, 153, 0));
     }//GEN-LAST:event_JClaimsMouseEntered
 
     private void JClaimsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JClaimsMouseExited
         // TODO add your handling code here:
-        JClaims.setBackground(new Color(255,255,255));
+        JClaims.setBackground(new Color(255, 255, 255));
     }//GEN-LAST:event_JClaimsMouseExited
 
     /**

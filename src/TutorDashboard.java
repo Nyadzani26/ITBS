@@ -486,9 +486,10 @@ public class TutorDashboard extends javax.swing.JFrame {
     private void btnDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDashboardActionPerformed
         // TODO add your handling code here:
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
+            
             Connection con = DriverManager.getConnection(host, uName, uPass);
 
             String query = "SELECT ROLES FROM TUTORIALS WHERE STUDENT_NUMBER = ?";
@@ -663,9 +664,9 @@ public class TutorDashboard extends javax.swing.JFrame {
         String studenNumer = prof.getStudentNo();
 
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
 
             String query = "SELECT PASSWOORD, FIRST_NAME, LAST_NAME FROM TUTORIALS WHERE STUDENT_NUMBER = ?";

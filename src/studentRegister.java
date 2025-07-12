@@ -413,7 +413,7 @@ public class studentRegister extends javax.swing.JFrame {
         String studentNo = tfStudentNo.getText();
         if (studentNo.length() != 9) {
             lblStudentNo.setVisible(true);
-             lblStudentNo.setText("Should be 9 Characters");
+            lblStudentNo.setText("Should be 9 Characters");
             tfStudentNo.setBorder(BorderFactory.createLineBorder(red, 1, false));
         } else {
             lblStudentNo.setVisible(false);
@@ -564,32 +564,32 @@ public class studentRegister extends javax.swing.JFrame {
 
     private void jLabel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MousePressed
         // TODO add your handling code here:
-        tfPassword.setEchoChar((char)0);
+        tfPassword.setEchoChar((char) 0);
     }//GEN-LAST:event_jLabel1MousePressed
 
     private void jLabel1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseReleased
         // TODO add your handling code here:
-         tfPassword.setEchoChar((char)'*');
+        tfPassword.setEchoChar((char) '*');
     }//GEN-LAST:event_jLabel1MouseReleased
 
     private void jLabel3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MousePressed
         // TODO add your handling code here:
-        tfConPassword.setEchoChar((char)0);
+        tfConPassword.setEchoChar((char) 0);
     }//GEN-LAST:event_jLabel3MousePressed
 
     private void jLabel3MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseReleased
         // TODO add your handling code here:
-        tfConPassword.setEchoChar((char)'*');
+        tfConPassword.setEchoChar((char) '*');
     }//GEN-LAST:event_jLabel3MouseReleased
 
     private void btnSignUpMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSignUpMouseEntered
         // TODO add your handling code here:
-        btnSignUp.setBackground(new Color(204,153,0));
+        btnSignUp.setBackground(new Color(204, 153, 0));
     }//GEN-LAST:event_btnSignUpMouseEntered
 
     private void btnSignUpMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSignUpMouseExited
         // TODO add your handling code here:
-        btnSignUp.setBackground(new Color(255,255,255));
+        btnSignUp.setBackground(new Color(255, 255, 255));
     }//GEN-LAST:event_btnSignUpMouseExited
 
     /**
@@ -664,9 +664,9 @@ public class studentRegister extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 private void databaseConnection() {
         try {
-            String host = "jdbc:derby://localhost:1527/Tutorilas";
-            String uName = "user1";
-            String uPass = "user1";
+            String host = "db.url";
+            String uName = "db.username";
+            String uPass = "db.password";
             con = DriverManager.getConnection(host, uName, uPass);
 
             String firstName = tfFirstName.getText();
@@ -683,7 +683,6 @@ private void databaseConnection() {
             // Hash the password using SHA-256
             String hashedPassword = hashPassword(password);
 
-            
             // Prepare the SQL statement
             String query = "INSERT INTO TUTORIALS (FIRST_NAME, MIDDLE_NAME, LAST_NAME, STUDENT_NUMBER, PASSWOORD, ROLES) VALUES (?, ?, ?, ?, ?, ?)";
             PreparedStatement ps = con.prepareStatement(query);

@@ -130,9 +130,6 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\Admin\Documents\NetBeansProjects\tutorialRequests2\src\home_24px.png"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="Home"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                       <Color id="Hand Cursor"/>
@@ -146,11 +143,6 @@
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel11">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\Admin\Desktop\Logo.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="Username">
                   <Properties>
@@ -248,13 +240,11 @@
                                   </Group>
                                   <Component id="JTitle" alignment="1" min="-2" pref="275" max="-2" attributes="0"/>
                                   <Component id="JInitials" alignment="1" min="-2" pref="275" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="JGender" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="tfAcademicLevel" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="tfCourse" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="JPhoneNo" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="JEmail" min="-2" pref="275" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="JGender" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="tfAcademicLevel" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="tfCourse" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="JPhoneNo" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="JEmail" alignment="0" min="-2" pref="275" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="49" max="32767" attributes="0"/>
                           </Group>
